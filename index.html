@@ -3,91 +3,550 @@
 <head>
     <title>Delivery FOod</title>
     <link rel="stylesheet" href="style.css" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <header class='header container'>
+      <!-- <div class='cover'> -->
+
     <div class='header-top'>
-      <div class='logo'></div>
+      <!-- <div class='logo'></div> -->
       <button class='header-top__login'>Войти</button>
     </div>
+
     <div class='header-bottom'>
-      <div class='header-bottom__address'>
+      <!-- <div class='header-bottom__address'>
         Адрес: ул. Токарева, 10А, Сестрорецк, Санкт-Петербург, 197706
-      </div>
-      <div class="basket">
-        <a href=#>Оформить заказ</a>
-      </div>
-    </div>
+      </div> -->
+     
+  <!-- </div> -->
 </header>
 
 <main>
   <div class='container'>
-    <ul class='sections'>
-      <li class='sections__item'><a href="#soups">Супы</a></li>
-      <li class='sections__item'><a href="#pizza">Пицца</a></li>
-      <li class='sections__item'><a href="#pasta">Паста</a></li>
-      <li class='sections__item'><a href="#main">Горячие блюда</a></li>
-      <li class='sections__item'><a href="#dessert">Десерты</a></li>
-      <li class='sections__item'><a href="#drinks">Напитки</a></li>
+    <nav>
+      <ul class='sections'>
+        <li class='sections__item'><a href="#soups">Супы</a></li>
+        <li class='sections__item'><a href="#pizza">Пицца</a></li>
+        <li class='sections__item'><a href="#pasta">Паста</a></li>
+        <li class='sections__item'><a href="#main">Горячие блюда</a></li>
+        <li class='sections__item'><a href="#dessert">Десерты</a></li>
+        <li class='sections__item'><a href="#drinks">Напитки</a></li>
+      </ul>
+    </nav>
+    <h3 class='menu-section' id='soups'>Супы</h3>
+    <ul class='menu'>
+      <li class='menu-item'>
+        <img src="img/finnishFishSoup.png" alt='finnish soup' class='menu-item__img'>
+        <div class='menu-item__name'>Финская уха с лососем и судаком</div>
+        <div class='menu-item__description'>
+          <p>Лосось, судак, картофель, томаты и сливки</p>
+          <p> 350 г. </p>
+        </div>
+        <div class="menu-item__price"> 380 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
+      <li class='menu-item'>
+        <img src="img/lagman.png" alt='lagman' class='menu-item__img'>
+        <div class='menu-item__name'>Лагман</div>
+        <div class='menu-item__description'>
+          <p>Густой мясной суп с говядиной и домашней лапшой</p>
+          <p> 350 г. </p>
+        </div>
+        <div class="menu-item__price"> 300 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
+      <li class='menu-item'>
+       <img src="img/spinachCreamSoup.png" alt='spinachCreamSoup' class='menu-item__img'>
+        <div class='menu-item__name'>Крем-суп из шпината с лососем</div>
+        <div class='menu-item__description'>
+          <p>Идеальное сочетание шпината, сливок и лосося.</p>
+          <p> 300 г. </p> 
+        </div>
+        <div class="menu-item__price"> 320 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
+      <li class='menu-item'>
+       <img src="img/mushroomСreamSoup.png" alt='mushroomCreamSoup' class='menu-item__img'>
+        <div class='menu-item__name'>Крем-суп из грибов</div>
+        <div class='menu-item__description'>
+          <p>Сливочный суп нежной консистенции с шампиньонами и белыми грибами.</p>
+          <p> 260 г. </p> 
+        </div>
+        <div class="menu-item__price"> 280 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
+      <li class='menu-item'>
+      <img src="img/pumpkinСreamSoup.png" alt='pumpkinCreamSoup' class='menu-item__img'>
+        <div class='menu-item__name'>Крем-суп из тыквы</div>
+        <div class='menu-item__description'>
+          <p>Тыква, сливки блендерируются. Суп подается с жаренными семечками и оливковым маслом.</p>
+          <p> 300 г. </p> 
+        </div>
+        <div class="menu-item__price"> 270 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
+      <li class='menu-item'>
+      <img src="img/hodgepodge.png" alt='hodgepodge' class='menu-item__img'>
+        <div class='menu-item__name'>Солянка</div>
+        <div class='menu-item__description'>
+          <p>Классическая мясная солянка с говядиной и домашними колбасками</p>
+          <p> 320 г. </p> 
+        </div>
+        <div class="menu-item__price"> 390 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
     </ul>
 
-    <h3 menu-section id='soups'>Супы</h3>
-    <ul class='menu-soups'>
-      <li class='menu-soups__item'><div>Финская уха с лососем и судаком<div></li>
-      <li class='menu-soups__item'>Лагман</li>
-      <li class='menu-soups__item'>Крем-суп из шпината с лососем</li>
-      <li class='menu-soups__item'>Крем-суп из грибов</li>
-      <li class='menu-soups__item'>Крем-суп из тыквы</li>
-      <li class='menu-soups__item'>Солянка</li>
+    <h3 class='menu-section'  id='pizza'>Пицца</h3>
+    <ul class='menu'>
+      <li class='menu-item'>
+       <img src="img/barcelona.png" alt='barcelona' class='menu-item__img'>
+        <div class='menu-item__name'>Барселона</div>
+        <div class='menu-item__description'>
+          <p>Форель слабой соли, цукини, томаты, сыр моцарелла</p>
+          <p> 570 г. </p> 
+        </div>
+        <div class="menu-item__price"> 590 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+        </li>
+      <li class='menu-item'>
+      <img src="img/vegetariano.png" alt='vegetariano' class='menu-item__img'>
+        <div class='menu-item__name'>Вегетариано</div>
+        <div class='menu-item__description'>
+          <p>цукини, томаты, кукуруза, моцарелла, шампиньоны, микс салатов</p>
+          <p> 590 г. </p> 
+        </div>
+        <div class="menu-item__price"> 590 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
+      <li class='menu-item'>
+      <img src="img/salami.png" alt='salami' class='menu-item__img'>
+        <div class='menu-item__name'>Салями</div>
+        <div class='menu-item__description'>
+          <p>салями, моцарелла, томатный соус</p>
+          <p> 430 г. </p> 
+        </div>
+        <div class="menu-item__price"> 540 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
+      <li class='menu-item'>
+       <img src="img/pepperoni.png" alt='pepperoni' class='menu-item__img'>
+        <div class='menu-item__name'>Пепперони</div>
+        <div class='menu-item__description'>
+          <p>пепперони, болгарский перец, сыр моцарелла</p>
+          <p> 490 г. </p> 
+        </div>
+        <div class="menu-item__price"> 590 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
+      <li class='menu-item'>
+       <img src="img/cesar.png" alt='cesar' class='menu-item__img'>
+        <div class='menu-item__name'>Цезарь</div>
+        <div class='menu-item__description'>
+          <p>куриное филе, томаты, листья салата, пармезан, моцарелла</p>
+          <p> 610 г. </p> 
+        </div>
+        <div class="menu-item__price"> 620 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
+      <li class='menu-item'>
+        <img src="img/chicken.png" alt="chicken" class='menu-item__img'>
+        <div class='menu-item__name'>С курицей</div>
+        <div class='menu-item__description'>
+          <p>куриное филе, цукини, болгарский перец, моцарелла, зеленый и томатный соус</p>
+          <p> 560 г. </p> 
+        </div>
+        <div class="menu-item__price"> 590 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>м
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
+      <li class='menu-item'>
+        <img src="img/meatMix.png" alt="meatMix" class='menu-item__img'>
+        <div class='menu-item__name'>Мясной микс</div>
+        <div class='menu-item__description'>
+          <p>куриное филе, ветчина, бекон, салями, красный лук, сыр моцарелла</p>
+          <p> 510 г. </p> 
+        </div>
+        <div class="menu-item__price"> 590 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
+      <li class='menu-item'>
+        <img src="img/toscana.png" alt="toscana" class='menu-item__img'>
+        <div class='menu-item__name'>Тоскана</div>
+        <div class='menu-item__description'>
+          <p>маринованная говядина, сыр моцарелла, сливки, красный лук</p>
+          <p> 500 г. </p> 
+        </div>
+        <div class="menu-item__price"> 590 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
+      <li class='menu-item'>
+        <img src="img/fourChease.png" alt="fourChease" class='menu-item__img'>
+        <div class='menu-item__name'>Четыре Сыра</div>
+        <div class='menu-item__description'>
+          <p>моцарелла, пармезан, эмменталь, горгонзола</p>
+          <p> 470 г. </p> 
+        </div>
+        <div class="menu-item__price"> 590 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
     </ul>
-
-    <h3 menu-section id='pizza'>Пицца</h3>
-    <ul class='menu-pizza'>
-      <li class='menu-pizza__item'>Барселона</li>
-      <li class='menu-pizza__item'>Вегетариано</li>
-      <li class='menu-pizza__item'>Салями</li>
-      <li class='menu-pizza__item'>Пепперони</li>
-      <li class='menu-pizza__item'>Цезарь</li>
-      <li class='menu-pizza__item'>Македония</li>
-      <li class='menu-pizza__item'>С курицей</li>
-      <li class='menu-pizza__item'>Мясной микс</li>
-      <li class='menu-pizza__item'>Тоскана</li>
-      <li class='menu-pizza__item'>Четыре сыра</li>
+    <h3 class='menu-section' id='pasta'>Паста</h3>
+    <ul class='menu'>
+      <li class='menu-item'>
+        <img src="img/withSausages.png" alt="withSausages" class='menu-item__img'>
+        <div class='menu-item__name'>C домашними колбасками</div>
+        <div class='menu-item__description'>
+          <p>Паста с колбасками, сливочным сыром,сыром пармезан в соусе «суго»</p>
+          <p> 350 г. </p> 
+        </div>
+        <div class="menu-item__price"> 430 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
+      <li class='menu-item'>
+        <img src="img/withPorcini.png" alt="withPorcini" class='menu-item__img'>
+        <div class='menu-item__name'>Тальятелле с белыми грибами</div>
+        <div class='menu-item__description'>
+          <p>Ароматная грибная паста в сливочном соусе</p>
+          <p> 390 г. </p> 
+        </div>
+        <div class="menu-item__price"> 450 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
+      <li class='menu-item'>
+        <img src="img/withSpinach.png" alt="withSpinach" class='menu-item__img'>
+        <div class='menu-item__name'>Равиоли со шпинатом и сливочным сыром</div>
+        <div class='menu-item__description'>
+          <p>Подаются в сливочном соусе со шпинатом</p>
+          <p> 230 г. </p> 
+        </div>
+        <div class="menu-item__price"> 420 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
+      <li class='menu-item'>
+        <img src="img/lasagna.png" alt="lasagna" class='menu-item__img'>
+        <div class='menu-item__name'>Лазанья мясная</div>
+        <div class='menu-item__description'>
+          <p>Многослойное мясное блюдо, из из прямоугольных пластов пасты, промазанных соусом Болоньезе, Бешамель, сыром моцарелла, пармезана и соусом Суго.</p>
+          <p> 320 г. </p> 
+        </div>
+        <div class="menu-item__price"> 420 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
+      <li class='menu-item'>
+        <img src="img/withSeafood.png" alt="withSeafood" class='menu-item__img'>
+        <div class='menu-item__name'>Паста с морепродуктами</div>
+        <div class='menu-item__description'>
+          <p>лосось, судак, осьминог, мидии, кальмар, соус суго.</p>
+          <p> 430 г. </p> 
+        </div>
+        <div class="menu-item__price"> 520 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
     </ul>
-    <h3 menu-section id='pasta'>Паста</h3>
-    <ul class='menu-pasta'>
-      <li class='menu-pasta__item'>Паста домашними колбасками</li>
-      <li class='menu-pasta__item'>Тальятелле с белыми грибами</li>
-      <li class='menu-pasta__item'>Равиоли со шпинатом и сливочным сыром</li>
-      <li class='menu-pasta__item'>Равиоли Прошутто э Панно</li>
-      <li class='menu-pasta__item'>Лазанья мясная</li>
-      <li class='menu-pasta__item'>Паста с морепродуктами</li>
+    <h3 class='menu-section' id='main'>Горячие блюда</h3>
+    <ul class='menu'>
+      <li class='menu-item'>
+        <img src="img/kebab.png" alt="kebab" class='menu-item__img'>
+        <div class='menu-item__name'>Люля Кебаб</div>
+        <div class='menu-item__description'>
+          <p>шашлык из баранины</p>
+          <p> 345 г. </p> 
+        </div>
+        <div class="menu-item__price"> 550 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
+      <li class='menu-item'>
+        <img src="img/porkLoin.png" alt="porkLoin" class='menu-item__img'>
+        <div class='menu-item__name'>Свиная корейка на кости</div>
+        <div class='menu-item__description'>
+          <p>Летнее предложение!</p>
+          <p> 320 г. </p> 
+        </div>
+        <div class="menu-item__price"> 690 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
+      <li class='menu-item'>
+      <img src="img/zander.png" alt="zander" class='menu-item__img'>
+        <div class='menu-item__name'>Судак в картофельной корочке</div>
+        <div class='menu-item__description'>
+          <p>Нежное филе судака в картофельной корочке, подается с соусом тар-тар.</p>
+          <p> 400 г. </p> 
+        </div>
+        <div class="menu-item__price"> 550 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
+      <li class='menu-item'>
+        <img src="img/chickenCutlet.png" alt="chichenCutlet" class='menu-item__img'>
+        <div class='menu-item__name'>Куриные котлеты с картофельным пюре</div>
+        <div class='menu-item__description'>
+          <p>Две куриные котлеты из нежного куриного фарша,подаются с пюре и маринованным огурцом. Рекомендованы для детей.</p>
+          <p> 400 г. </p> 
+        </div>
+        <div class="menu-item__price"> 520 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
+      <li class='menu-item'>
+      <img src="img/sausages.png" alt="sausages" class='menu-item__img'>
+        <div class='menu-item__name'>Колбаски по-домашнему с капустой</div>
+        <div class='menu-item__description'>
+          <p>Сочные домашние колбаски подаются с отварным картофелем и тушёной капустой</p>
+          <p> 400 г. </p> 
+        </div>
+        <div class="menu-item__price"> 550 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
     </ul>
-    <h3 menu-section id='main'>Горячие блюда</h3>
-    <ul class='menu-mainDish'>
-      <li class='menu-mainDish__item'>Люля-кебаб</li>
-      <li class='menu-mainDish__item'>Свиная корейка на кости</li>
-      <li class='menu-mainDish__item'>Судак в картофельной корочке</li>
-      <li class='menu-mainDish__item'>Судак по-польски</li>
-      <li class='menu-mainDish__item'>Куриные котлеты с картофельным пюре</li>
-      <li class='menu-mainDish__item'>Колбаски по-домашнему с капустой</li>
-    </ul>
-    <h3 menu-section id="dessert">Десерты</h3>
-    <ul class='menu-dessert'>
-      <li class='menu-dessert__item'>Шоколадный фондан</li>
-      <li class='menu-dessert__item'>Панна-котта с брусничным соусом</li>
-      <li class='menu-dessert__item'>Сметанник</li>
-      <li class='menu-dessert__item'>Фирменные заварные булочки</li>
-      <li class='menu-dessert__item'>Наполеон</li>
-      <li class='menu-dessert__item'>Графские развалины</li>
-    </ul>
-    <h3 menu-section id='drinks'>Напитки</h3>
-    <ul class='menu-drinks'>
-      <li class='menu-drinks__item'>Сок в ассортименте</li>
-      <li class='menu-drinks__item'>Морс домашний</li>
-      <li class='menu-drinks__item'>Лимонад домашний</li>
+    <h3 class='menu-section' id="dessert">Десерты</h3>
+    <ul class='menu'>
+      <li class='menu-item'>
+        <img src="img/chocolateFondant.png" alt="chocolateFondant" class='menu-item__img'>
+        <div class='menu-item__name'>Шоколадный фондан</div>
+        <div class='menu-item__description'>
+          <p></p>
+          <p> 175 г. </p> 
+        </div>
+        <div class="menu-item__price"> 350 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
+      <li class='menu-item'>
+      <img src="img/panacota.png" alt="panacota" class='menu-item__img'>
+        <div class='menu-item__name'>Панна-котта с брусничным соусом</div>
+        <div class='menu-item__description'>
+          <p></p>
+          <p> 240 г. </p> 
+        </div>
+        <div class="menu-item__price"> 280 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
+      <li class='menu-item'>
+        <img src="img/sourCream.png" alt="sourCream" class='menu-item__img'>
+        <div class='menu-item__name'>Сметанник  </div>
+        <div class='menu-item__description'>
+          <p></p>
+          <p> 220 г. </p> 
+        </div>
+        <div class="menu-item__price"> 250 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
+      <li class='menu-item'>
+        <img src="img/napoleon.png" alt="napoleon" class='menu-item__img'>
+        <div class='menu-item__name'>Наполеон</div>
+        <div class='menu-item__description'>
+          <p></p>
+          <p> 200 г. </p> 
+        </div>
+        <div class="menu-item__price"> 250 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
+      <li class='menu-item'>
+        <img src="img/count'sRuins.png" alt="count'sRuins" class='menu-item__img'>
+        <div class='menu-item__name'>Графские развалины </div>
+        <div class='menu-item__description'>
+          <p></p>
+          <p> 205 г. </p> 
+        </div>
+        <div class="menu-item__price"> 260 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </li>
     </ul>
   </div>
-</main>
+<!--       <h3 class='menu-section' id='drinks'>Напитки</h3>
+ -->  <!--   <ul class='menu'>
+      <li class='menu-item'>Сок в ассортименте</li>
+      <li class='menu-item'>Морс домашний</li>
+      <li class='menu-item'>Лимонад домашний</li>
+    </ul> -->
+ <div class="basket">
+        <a href=#>Оформить заказ</a>
+        <p class='basket__price'> 650 руб. </p>
+      </div>
+  </div>
+     <div class='login-register'>
+      <p>Войти</p>
+      <form>
+        <label for='userName'>email</label>
+        <input type="text" name="user" id='userName' >
+        <label for='password'>пароль</label>
+        <input type="text" name="password" id='password'>
+        <button class='submit'>Войти</button>
+      </form>
+    </div>
 
+    <div class='personal'>
+      <p class='personal__address'>Адрес: ул.Всеволода Боброва 25 кв.72</p>
+      <p class='personal__telephone'>Телефон: +79215863958</p>
+      <p class='personalemail'>Email: suleesa@gmail.com</p>
+    </div>
+
+
+    <div class='menu-item_change'>
+      <div class='menu-item__imgDesc_change'>
+      <img src="img/finnishFishSoup.png" alt='finnish soup' class='menu-item__img_change'>
+      <div class='menu-item__description_change'>
+        <div class='menu-item__name'>Финская уха с лососем и судаком</div>
+        <div class='menu-item__description'>
+          <p>Лосось, судак, картофель, томаты и сливки</p>
+          <p> 350 г. </p>
+        </div>
+        <div class="menu-item__price"> 380 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+        <button class='menu-item__order'>Добавить в корзину</button>
+      </div>
+      </div>
+    </div>
+    <li class='menu-item_change'>
+      <div class='menu-item__imgDesc_change'>
+      <img src="img/barcelona.png" alt='barcelona' class='menu-item__img_change'>
+      <div class='menu-item__description_change'>
+        <div class='menu-item__name'>Барселона</div>
+        <div class='menu-item__description'>
+          <p>Форель слабой соли, цукини, томаты, сыр моцарелла</p>
+          <p> 570 г. </p> 
+        </div>
+        <div class="menu-item__price"> 590 руб. </div>
+        <div class='menu-item__amount'> 
+          <button> - </button> 1шт <button> + </button>
+        </div>
+      </div>
+      </div>
+      <div class="toppings">
+        <p>Топинги на ваш выбор</p>
+        <form class='topping'>
+          <label><input type="checkbox" name="topping">Ананас <span class='addPrice'>50 руб.</span></label>
+          <label><input type="checkbox" name="topping">Бекон <span class='addPrice'>50 руб.</span></label>
+          <label><input type="checkbox" name="topping">Курица <span class='addPrice'>50 руб.</span></label>
+          <label><input type="checkbox" name="topping">Соус Барбекю<span class='addPrice'> 50 руб.</span></label>
+          <label><input type="checkbox" name="topping">Соус Рэнч<span class='addPrice'> 50 руб.</span></label>
+          <label><input type="checkbox" name="topping">Чеснок<span class='addPrice'> 50 руб.</span></label>
+          <label><input type="checkbox" name="topping">Грибы<span class='addPrice'> 50 руб.</span></label>
+          <label><input type="checkbox" name="topping">Перец халапеньо<span class='addPrice'> 50 руб.</span></label>
+          <label><input type="checkbox" name="topping">Кабачок<span class='addPrice'> 50 руб.</span></label>
+          <label><input type="checkbox" name="topping">Чеддер<span class='addPrice'> 50 руб.</span></label>
+        </form>
+      </div>
+      <button class='menu-item__order'>Добавить в корзину</button>
+    </li>
+  <div class='myOrders'>
+    <table>
+      <tr>
+        <th>Дата заказа</th>
+        <th>Статус</th>
+        <th class='payment'>Оплата</th>
+        <th>Сумма</th>
+        <th>Заказ</th>
+      </tr>
+      <tr>
+        <td>16.08.19</td>
+        <td>Доставлен</td>
+        <td class='payment'>Оплачено банковской картой</td>
+        <td>1980 руб.</td>
+        <td>
+          <ol>
+            <li>Свиная корейка на кости</li>
+            <li>Крем-суп из тыквы</li>
+            <li>Барселона</li>
+          </ol>
+        </td>
+      </tr>
+  
+
+    </table>
+  </div>
+</main>
+<script>
+
+</script>
 </body>
