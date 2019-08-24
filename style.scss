@@ -4,7 +4,7 @@
 	font-family: "Merriweather";
 	font-weight: light, bold, regular, black;
 	font-style: normal, italic;
-	src:url("https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet")
+	src:url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,700,900,900i&display=swap&subset=cyrillic" rel="stylesheet")
 }
 $backgroundColor:  rgba(255,187,115, 0.2);
 $textColor:#5e3101;
@@ -20,7 +20,9 @@ div,
 aside,
 main,
 button,
-nav{
+nav,
+select,
+{
   margin:  0;
   padding: 0;
   font-family: "Merriweather";
@@ -57,6 +59,14 @@ body{
 .header-top{
     @extend %header-shared;
 }
+
+.arrow-up{
+	width:60px;
+	position: fixed;
+	top:40px;
+	right: 40px;
+}
+
 .logo{
 	background-image:url("img/logo.png");
 	width:80px;
@@ -115,16 +125,20 @@ body{
 
 .basket{
 	position: fixed;
-	width:100%;
-	height: 60px;
+	width:20%;
+	bottom:0;
+	right:40px;
+	//border:20%;
+	height: 100px;
 	padding:20px;
 	bottom: 0px;
 	text-align: center;
     background-color: $yellowBasketColor;
 	border:1px solid $yellowBasketColor;
+	border-radius:5px;
 	color:white;
 	z-index: 2;
-
+	box-sizing:border-box;
 
 	a{
 		color:$textColor;
@@ -139,21 +153,24 @@ body{
 	}
 }
 
-.sections{
+#sections{
 	display: flex;
 	justify-content:space-around;
 	width: 85%;
     flex-wrap:wrap;
     margin: auto;
     box-sizing:border-box;
-    border-radius:5px;
+   // border-radius:5px;
 	opacity: 1	;
 	border-bottom:1px solid $textColor;
+	//position: fixed;
+	//background-color: $yellowBasketColor;
+	
 
 	    	a{
-    	padding:20px 20px;
+    	padding:10px 20px;
     	display: inline-block;
-		color:#631903;
+		color:$textColor;
 		text-decoration:underline;
     }
 }
@@ -167,7 +184,7 @@ body{
 .menu{
 	display: flex;
 	flex-wrap:wrap;
-	width:85%;
+	width:90%;
 	justify-content:flex-start;
 	box-sizing:border-box;
 	margin: auto;
@@ -180,13 +197,11 @@ body{
 
 .menu-section{
 	font-size: 26px;
-	margin-top: 40px;
 	text-align: center;
-	width:85%;
+	width:90%;
 	margin: 40px auto;
+	box-sizing:border-box;
 	color:$textColor	;
-;
-
 	// margin-left: 40px;
 }
 
@@ -200,12 +215,23 @@ body{
 	margin-bottom: 40px;
 	height: auto;
 	width:280px;
-	border-radius:10px;
-	margin-left:20px;
+	border-radius:5px;
+	margin-left:30px;
 }
 
+.icons{
+	align-self:flex-end;
+}
 
+.item-edit{
+	width:20px;
+}
 
+.item-delete{
+	width:20px;
+		align-self:flex-end;	
+
+}
 .menu-item:last-child{
 	align-self:stretch;
 }
@@ -254,8 +280,7 @@ body{
 .login-register{
 	display: flex;
 	flex-direction:column;
-	width:200px;
-	max-width:60%;
+	width:45%;
 	padding:20px;
 	margin: auto;
     align-items:center;
@@ -265,12 +290,14 @@ body{
 	border:1px solid $textColor;
 	border-radius: 5px;
 	color:$textColor;
+	box-sizing:border-box;
 
 
     button{
-    width:150px;
+    width:200px;
     display:block;
     margin: 20px auto 0px auto;
+    height: 30px;
     font-size: 18px;
     border-radius:5px;
 	background-color: $brightButtonColor;
@@ -286,20 +313,11 @@ body{
    input[type='text'], label{
 	display: block;
 	margin: 10px;
-	width:150px;
+	width:200px;
 	height: 20px;
   
-}
+	}
 	
-}
-
-
-
-
-.personal{
-	border: 1px solid black;
-	max-width: 100%;
-	margin: 50px auto;
 }
 
 
@@ -310,8 +328,9 @@ body{
 	border:1px solid $brightButtonColor;
 	border-radius: 5px;
 	width:45%;
+	box-sizing:border-box;
 	margin:200px auto;
-	padding: 20px;
+	padding: 30px;
 	background-color: white;
 	color:$textColor;
 	 .addPrice{
@@ -360,36 +379,194 @@ body{
 }
 
 
-.myOrders{
-  margin:200px auto;
-  width:90%;
+.ordersHistory{
+  margin:50px auto 200px auto;
+ // width:90%;
   padding: 0;
   color:$textColor;
 
+ .select-css {
+    display: block;
+    font-size: 14px;
+    color: $textColor;
+    padding: 5px 10px 5px 0;
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid $textColor;
+    border-radius: 5px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: rgba(255,187,115, 0.1);
+    background-image: url('img/arrow-down.svg');
+    background-repeat: no-repeat, repeat;
+    background-position: right 2% top 50%;
+    background-size: .65em auto, 100%;
+}
 
-  table{
-  	margin: 0;
-  	padding: 0;
-  	width: 100%;
-  	border-collapse: collapse;
-  	border: 3px solid $textColor;
+.select-css::-ms-expand {
+    display: none;
+}
+.select-css:hover {
+    border-color: $textColor;
+}
+.select-css:focus {
+    border-color: $textColor;
+    color: $textColor; 
+    outline: none;
+}
+.select-css option {
+    font-weight:normal;
+}
 
-    td, th{
-      border: 1px solid $textColor;
-      padding:20px;
+  td{
+  	padding: 10px;
+  }
+
+  td, th{
+    border: 1px solid $textColor;
+    padding-left:20px;
+    box-sizing:border-box;
+
     }
 
+  table{
+  	margin: 0 auto;
+  	padding: 0;
+  	width: 80%;
+  	border-spacing:0;
+  	border-collapse: separate;
+  	border: 2px solid $textColor;
+  	border-radius: 5px;
+  	box-sizing:border-box;
+  //	max-width: 100%;
+  
+    caption{
+   		align:center;
+   		font-size: 24px;	
+   		margin-bottom: 20px
+ 		 }
+	}
+}
 
-  }
+.personal{
+	color:$textColor;
+
+	table{
+		border-collapse: separate;
+		border-spacing:0;
+		border: 2px solid $textColor;
+		border-radius: 5px;
+		width:80%;
+		box-sizing:border-box;
+		margin:auto;
+
+	}
+	td{
+		border: 1px solid $textColor;
+		padding: 10px;
+	}
+	caption{
+		align:center;
+   		font-size: 24px;	
+   		margin-bottom: 20px
+ 		 
+	}
+}
+
+
+.order{
+	color:$textColor;
+	margin: 100px auto;
+	width:50%;
+	border:2px solid $textColor;
+	font-size: 16px;
+	border-radius: 5px;
+	position: relative;
+	//background-color: $backgroundCol
+
+	.picnic{
+		width:140px;
+		position: absolute;		
+		top:40px;
+		right: 40px;
+	}
+	h3{
+		margin:20px
+	}
+	h1{
+		text-align: left;
+		margin-left: 20px;
+	}
+	label,p, input[type='text'],textarea {
+		display: block;
+		margin:0 20px;
+	}
+
+	input[type='text']{
+		//background-color: rgba(255,187,115, 0.1);
+		margin:5px 0;
+		height: 30px;
+		border-radius: 5px;
+
+	}
+	label{
+		padding:0;
+	}
+
+	textarea{
+		height: 60px;
+		width:200px;
+		margin:5px 0;
+		//background-color: rgba(255,187,115, 0.1);
+		//margin-left: 20px;
+		border-radius: 5px;
+
+
+	}
+	button[type='submit']{
+		margin:0 20px 20px 20px;
+		color:white;
+		padding:10px;
+		font-size: 20px;
+		background-color: $brightButtonColor;
+		border-radius: 5px;
+
+	}
+
+	.changeAmount{
+		display: inline-block;
+		width:50%;
+	}
+
+	ol{
+		margin:20px;
+		list-style: none;
+		padding: 0;
+		border-top: 1px solid $textColor;
+		border-bottom: 1px solid $textColor;
+		//border-radius: 5px;
+
+		li{
+			display: inline-block;
+			width:35%;
+			margin:5px 0;
+		}
+	}
 }
 
 @media screen and (max-width: 800px){
 	.menu{
-		width:100%
+		width:100%;
 	}
 
+	.menu-item_change{
+	    //box-sizing:border-box;
+	    width:60%;
+
+	}
 	.menu-item__img_change{
-		width:50%;
+		width:40%;
 		align-self:flex-start;
 
 	}
@@ -397,18 +574,70 @@ body{
 	.menu-item__description_change{
 		width:45%
 	}
+	.ordersHistory{
+		margin:0;
+		padding:0;
+
+	table, th, td, tr{
+			display: block;
+			border:none;
+		}
+	table{
+		padding-left: 15%
+
+	}
+
+	th{
+		position: absolute;
+		left:-9999999px;
+		top:-9999999px;
+	}
+
+	td{
+		position:relative;
+		padding:10px;
+		padding-left: 100px;
+		border:none;
+
+	}
+
+	td:before{
+		position: absolute;
+		left: 6px;
+		content:attr(data-th);
+	}
+
+	.client{
+		border-top:3px solid $textColor;
+		width:100%
+		}
+
+ 	}
+ 	.basket{
+		width:40%;
+		right: 0;
+	}
+
+	.order{
+		width:70%;
+
+		ol li{
+			width:50%
+		}
+		.picnic{
+			width:120px;
+		}
+	}
 }
 
 @media screen and (max-width: 550px){
 	.menu-item_change{
-	    box-sizing:border-box;
-	    width:70%;
-
+		width:80%
 	}
+
 	.menu-item__img_change{
 		width:100%;
 		margin: auto;
-
 	}
 	.menu-item__description_change{
 		width:100%;
@@ -420,7 +649,7 @@ body{
 	}
 	
 	.menu{
-		width:70%;
+		width:80%;
 	}
 	.menu-item{
 		width:100%;
@@ -434,16 +663,31 @@ body{
 		align-items:center;
 	}
 
-	.myOrders{
+	.ordersHistory table{
+		width:90%;
+		padding-left: 0;
+	}
+	.basket{
+		width:100%;
+		right: 0;
+	}
 
-		.payment{
-			display: none;
+	.order{
+		width:90%;
 
+		ol li{
+			width:60%
 		}
 
-		ol{
-			list-style: none;
+		.changeAmount{
+			width:30%
 		}
+		.picnic{
+			width:100px;
+		}
+	}
+	.login-register{
+		width:90%;
 	}
 }
 
