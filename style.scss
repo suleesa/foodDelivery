@@ -8,9 +8,9 @@
 }
 $backgroundColor:  rgba(255,187,115, 0.2);
 $textColor:#5e3101;
-$brightButtonColor: #FF5D40;
+$brightButtonColor:	 #FF5D40;
 $buttonBorderColor: #FF8973;
-$yellowBasketColor:#FFBB73;
+$yellowBasketColor:rgba(255,187,115, 1);
 
 html,
 body,
@@ -36,81 +36,136 @@ body{
 	   background-color:$backgroundColor;
 
 }
+
+a{
+	text-decoration: none;
+}
 .container{
    display: flex;
    flex-direction:column;
-   width:94%;
+   width:1200px;
    margin: auto;
    justify-content:space-between;
    box-sizing:border-box;
+   max-width: 100%
 
 }
 
+
 %header-shared{
 	display: flex;
-	width:100%;
-	justify-content:flex-end;
-	padding: 20px 0px;
+	justify-content:center;
+	padding: 30px 0px;
 	box-sizing:border-box;
 	color:$textColor;
-	 // border: 1px solid red;
+	flex-wrap:wrap;
 }
 
 .header-top{
     @extend %header-shared;
+	width:1020px				;
+	margin: auto;
+	max-width: 100%
 }
+
+#logIn{
+	display: flex;
+	justify-content:space-around;
+	flex-wrap:no-wrap;
+
+	img{
+
+	margin-right: 10px;
+	border:1px solid $brightButtonColor;
+	transition: all 0.3s ease 0s;
+    cursor: pointer;
+    box-shadow: 2px 2px 3px $textColor;
+
+	&:active{
+		transform: translateY(5px);
+  	  		box-shadow: 0px 0 0px $textColor;
+
+		}
+	}
+}
+
 
 .arrow-up{
 	width:60px;
 	position: fixed;
 	top:40px;
 	right: 40px;
+	z-index: 10;
 }
 
-.logo{
-	background-image:url("img/logo.png");
-	width:80px;
-	height:80px;
-	background-position: 0 50%;
+#logOut{
+	display:none;
+	flex-wrap:wrap;
+	align-items:flex-start;
 }
+
+.buttons.log{
+	justify-content:space-around;
+	flex-wrap:no-wrap;
+
+	button{
+	height: 40px;
+	box-sizing:border-box;
+	font-size: 18px;
+	padding:0 40px;
+	border-radius:5px;
+	background-color: $brightButtonColor;
+	border:1px solid $brightButtonColor;
+	color:white;
+	transition: all 0.3s ease 0s;
+    cursor: pointer;
+    background-color: $brightButtonColor;
+    box-shadow: 2px 2px 3px $textColor;
+    margin-left:20px;
+
+ 
+	&:active{
+		transform: translateY(5px);
+  	  		box-shadow: 0px 0 0px $textColor;
+
+		}
+	}
+}
+	
+
 .header-top__login{
 	height: 40px;
-	position: relative;
 	box-sizing:border-box;
 	font-size: 24px;
 	padding:0 40px;
 	border-radius:5px;
 	background-color: $brightButtonColor;
-	border:1px solid $buttonBorderColor;
+	border:1px solid $brightButtonColor;
 	color:white;
+	box-shadow: 5px 5px 15px $textColor;
+	transition: all 0.3s ease 0s;
+    cursor: pointer;
+    background-color: $brightButtonColor;
+    box-shadow: 2px 2px 3px $textColor;
+
+    &:hover{   
+ 	 	background-color: $brightButtonColor;
+	  color:white;
+	}
+	&:active{
+		box-shadow: 0px 0 0 $textColor;
+		transform:translateY(5px)
+
+	}
 }
 
 
-
-.header-top__login:before{
-	content: " ";
-	position: absolute;
-	left:-65px;
-	top:-1px;
+.facebook,.vk{
+	border:1px solid #FFBB73;
+	border-radius:5px;
 	box-sizing:border-box;
 	width:40px;
-	height: 40px;
-	// border: 1px solid green;
-	background-image: url("img/facebook-logo.svg");
-	background-size: cover;
-}
-
-.header-top__login:after{
-	content: " ";
-	position: absolute;
-	left:-120px;
-	top:-1px;
-	box-sizing:border-box;
-	width:40px;
-	height: 40px;
-	border: 1px solid green;
-	background-image: url("img/vkontakte-logo.svg");
-
+height: 40px;
 }
 
 .header-bottom{
@@ -128,50 +183,60 @@ body{
 	width:20%;
 	bottom:0;
 	right:40px;
-	//border:20%;
 	height: 100px;
-	padding:20px;
 	bottom: 0px;
-	text-align: center;
+	z-index: 12;
+
+    button{
+    text-align: center;
+ 	border-radius:5px;
+	z-index: 4;
+	transition: all 0.3s ease 0s;
+    cursor: pointer;
+    width:100%;
     background-color: $yellowBasketColor;
 	border:1px solid $yellowBasketColor;
-	border-radius:5px;
-	color:white;
-	z-index: 2;
-	box-sizing:border-box;
-
-	a{
+    box-shadow: 0px 15px 20px $textColor;
+ 	
+ 	p{
 		color:$textColor;
 		font-size: 20px;
-		margin: 0;
+		}
 
+	&:hover{   
+  		background-color: $brightButtonColor;
+		box-shadow: 0px 15px 20px $textColor;
+		transform: translateY(-7px);
+		border:none;
+		color:white;
+  		p{
+  			  color:white;
+  		}
 	}
-	p{
-		color:$textColor;
-		font-size: 20px;
-		padding-bottom: 20px;
+
+	&:active{
+		color: $yellowBasketColor;
+		transform: translateY(7px);
+
+		}
 	}
+
 }
+
+
 
 #sections{
 	display: flex;
-	justify-content:space-around;
-	width: 85%;
+	justify-content:space-between;
     flex-wrap:wrap;
     margin: auto;
     box-sizing:border-box;
-   // border-radius:5px;
-	opacity: 1	;
-	border-bottom:1px solid $textColor;
-	//position: fixed;
-	//background-color: $yellowBasketColor;
-	
-
+	opacity: 1;
+	width:600px;
 	    	a{
-    	padding:10px 20px;
+    	padding:10px 20px 10px 0;
     	display: inline-block;
 		color:$textColor;
-		text-decoration:underline;
     }
 }
 
@@ -184,13 +249,16 @@ body{
 .menu{
 	display: flex;
 	flex-wrap:wrap;
-	width:90%;
-	justify-content:flex-start;
+	width:1020px;
+	max-width: 100%;
+	justify-content:center;
 	box-sizing:border-box;
 	margin: auto;
 	border-bottom:1px solid $textColor;
-	align-content:flex-end;
+	padding: 0;
 }
+
+
 
 
 
@@ -199,10 +267,19 @@ body{
 	font-size: 26px;
 	text-align: center;
 	width:90%;
-	margin: 40px auto;
+	margin: 20px auto;
 	box-sizing:border-box;
-	color:$textColor	;
-	// margin-left: 40px;
+		h3{
+			color:$textColor;
+					display: inline-block;
+
+		}
+	.soup, .pizza, .spaghetti, .hot, .pancakes{
+		width:40px;
+		height: 40px;
+		display: inline-block;
+		margin-left: 20px;
+	}
 }
 
 .menu-item{
@@ -213,14 +290,52 @@ body{
 	justify-content:space-between;
 	background-color: white;
 	margin-bottom: 40px;
-	height: auto;
+	height: 520px;
 	width:280px;
 	border-radius:5px;
-	margin-left:30px;
+	margin-right:30px;
+ 	box-shadow: 0px 0px 20px $textColor;
+	transition: all 0.3s ease 0s;
+	position: relative;
+
+
+
+ 	&:hover{
+ 		 box-shadow: 0px 15px 20px $textColor;
+		transform: translateY(-10px);
+		z-index: 3;
+
+		.item__description{
+  			height: 60px;
+  			overflow: visible;
+  			white-space: normal;
+
+
+  		}
+	}
+	
+  
 }
 
 .icons{
 	align-self:flex-end;
+	img{
+		box-shadow: 2px 2px 3px $textColor;
+		transition: all 0.3s ease 0s;
+    	cursor: pointer;
+
+		&:first-child{
+			border-radius: 5px;
+		}
+		&:nth-child(2){
+			border-radius: 50%;
+		}
+
+		&:active{
+			box-shadow: none;
+		}
+	}
+
 }
 
 .item-edit{
@@ -229,11 +344,9 @@ body{
 
 .item-delete{
 	width:20px;
-		align-self:flex-end;	
+	margin-left:20px;
+	align-self:flex-end;	
 
-}
-.menu-item:last-child{
-	align-self:stretch;
 }
 
 .menu-item__img{
@@ -244,92 +357,145 @@ body{
 
 .menu-item__name{
 	font-size: 20px;
-	margin:0;
 	font-weight: bold;
 	color:$textColor;
 	text-align: bottom;
+	height: 40px;
 
 }
 .menu-item__price{
 	color:#631903;
 	font-weight: bold;
 	font-size: 18px;
-	margin: 10px 0;
+
 }
 .menu-item__description{
     width: 90%;
     font-style: italic;
     color:$textColor;
-    p{
-    	margin:0;
-    }
+}
+.item__description{
+    height:60px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+     white-space: nowrap
+  }
+
+
+
+.menu-item__amount button{
+	background-color: $backgroundColor;
+	width: 20px;
+	height: 20px;
+	border: 1px solid $backgroundColor;
+	border-radius: 5px;
+	box-shadow: 1px 1px 0 0 $textColor;
+	transition: all 0.3s ease 0s;
+    cursor: pointer;
+
+	&:active{
+		transform: translateY(2px);
+		box-shadow: 0px 0px 0 0 $textColor;
+
+			}
 
 }
 
 .menu-item__order{
 	font-size: 18px;
 	padding: 10px;
-	margin-top: 10px;
+	margin-top: 20px;
 	border-radius:5px;
 	background-color: $brightButtonColor;
-	border:1px solid $buttonBorderColor;
+	border:1px solid $brightButtonColor;
 	color:white;
-}
+	box-shadow: 2px 2px 3px 0 $textColor;
+	    cursor: pointer;
 
 
-.login-register{
-	display: flex;
-	flex-direction:column;
-	width:45%;
-	padding:20px;
-	margin: auto;
-    align-items:center;
-    background-color: white;
-    font-size: 18px;
-    margin-bottom: 20px;
-	border:1px solid $textColor;
-	border-radius: 5px;
-	color:$textColor;
-	box-sizing:border-box;
-
-
-    button{
-    width:200px;
-    display:block;
-    margin: 20px auto 0px auto;
-    height: 30px;
-    font-size: 18px;
-    border-radius:5px;
-	background-color: $brightButtonColor;
-	border:1px solid $buttonBorderColor;
-	color:white;
-    }
-    
-
-    input[type='text']{
-    border:1px solid $textColor;
-	border-radius: 5px;
-}
-   input[type='text'], label{
-	display: block;
-	margin: 10px;
-	width:200px;
-	height: 20px;
-  
+	&:active{
+		box-shadow: 0 0 0 0 $textColor;;
+		transform:translateY(5px)
 	}
-	
 }
+
+#editOverlay{
+	display: none;
+	position: fixed;
+	top:0%;
+	left:0%;
+	width:100%;
+	height: 100%;
+	z-index:4;
+	margin:auto;
+	background-color: $backgroundColor
+}
+
+
+
+    .login-register{
+    	background-color: white;
+    	font-size: 18px;
+		border:1px solid $buttonBorderColor;
+		border-radius: 5px;
+		color:$textColor;
+		box-sizing:border-box;
+		z-index: 2;
+		margin:10px auto;
+		display: flex;
+		width: 300px;
+		flex-direction:column;
+		align-items:center;
+		padding:40px;
+			h2{
+				margin-top: 0;
+			}
+   		button{
+    		width:200px;
+    		display:block;
+    		margin: 20px auto 0px auto;
+    		height: 30px;
+		    font-size: 18px;
+		    border-radius:5px;
+			background-color: $brightButtonColor;
+			border:1px solid $brightButtonColor;
+			color:white;
+			transition: all 0.3s ease 0s;
+   			cursor: pointer;
+			box-shadow: 2px 2px 3px 0 $textColor;
+			&:active{
+				box-shadow: 0px 0px 0px 0 $textColor;
+				transform:translateY(5px)
+				}
+    		}
+    
+		input[type='text']{
+		    border:1px solid $textColor;
+			border-radius: 5px;
+			}
+   		input[type='text'], label{
+			display: block;
+			margin: 10px;
+			width:200px;
+			height: 20px;
+			}
+
+	
+		}
 
 
 .menu-item_change{
+		overflow: scroll;
 	display: flex;
+	position: absolute;
 	flex-direction:column;
 	justify-content:space-between;
 	border:1px solid $brightButtonColor;
 	border-radius: 5px;
-	width:45%;
+	width:500px;
+	top:2%; 
+	left:30%;
 	box-sizing:border-box;
-	margin:200px auto;
 	padding: 30px;
 	background-color: white;
 	color:$textColor;
@@ -381,7 +547,6 @@ body{
 
 .ordersHistory{
   margin:50px auto 200px auto;
- // width:90%;
   padding: 0;
   color:$textColor;
 
@@ -389,7 +554,7 @@ body{
     display: block;
     font-size: 14px;
     color: $textColor;
-    padding: 5px 10px 5px 0;
+    padding: 5px 5px 5px 0;
     box-sizing: border-box;
     margin: 0;
     border: 1px solid $textColor;
@@ -417,6 +582,8 @@ body{
 }
 .select-css option {
     font-weight:normal;
+    padding-left: 10px;
+
 }
 
   td{
@@ -424,7 +591,7 @@ body{
   }
 
   td, th{
-    border: 1px solid $textColor;
+  //  border: 1px solid $textColor;
     padding-left:20px;
     box-sizing:border-box;
 
@@ -442,48 +609,105 @@ body{
   //	max-width: 100%;
   
     caption{
-   		align:center;
+   		text-align:left;
    		font-size: 24px;	
    		margin-bottom: 20px
  		 }
 	}
+	button{
+		margin:0 20px 20px 20px;
+		color:white;
+		padding:10px;
+		font-size: 16px;
+		background-color: $brightButtonColor;
+		border-radius: 5px;
+    	box-shadow: 2px 2px 3px $textColor;
+    	border:$brightButtonColor;
+    	transition: all 0.3s ease 0s;
+   		 cursor: pointer;
+
+		&:active{
+			box-shadow: 0px 0px 0px $textColor;
+	  		transform: translateY(5px);
+		}
+	}
 }
 
 .personal{
+	width: 320px;
+	margin:0 auto;
 	color:$textColor;
+	border: 1px solid $textColor;
+	padding: 40px;
+	border-radius: 5px;
 
-	table{
-		border-collapse: separate;
-		border-spacing:0;
-		border: 2px solid $textColor;
+
+	h2{
+		margin-left:0;
+	}
+
+	label, input, textarea{
+		display:block;
+		width:200px;
+		margin: 10px 0px;
 		border-radius: 5px;
-		width:80%;
-		box-sizing:border-box;
-		margin:auto;
 
 	}
-	td{
+
+	input{
 		border: 1px solid $textColor;
-		padding: 10px;
+		border-radius: 5px;
+		height: 30px;
+
+		&::placeholder{
+			color:$textColor;
+			font-size: 14px;
+			padding: 5px;
+
+		}
 	}
-	caption{
-		align:center;
-   		font-size: 24px;	
-   		margin-bottom: 20px
- 		 
+	textarea{
+		width:200px;
+		height: 60px;
+		&::placeholder{
+			color:$textColor;
+			font-size: 14px;
+			padding: 5px;
+		}
 	}
+	.save{
+		margin:20px 20px 0px 0px;
+		color:white;
+		padding:10px;
+		font-size: 16px;
+		background-color: $brightButtonColor;
+		border-radius: 5px;
+    	box-shadow: 2px 2px 3px $textColor;
+    	border:$brightButtonColor;
+    	transition: all 0.3s ease 0s;
+   		 cursor: pointer;
+
+		&:active{
+			box-shadow: 0px 0px 0px $textColor;
+			transform:translateY(5px)
+		}
+
+
+
+	}
+
 }
 
 
 .order{
 	color:$textColor;
-	margin: 100px auto;
+	margin: 20px auto;
 	width:50%;
 	border:2px solid $textColor;
 	font-size: 16px;
 	border-radius: 5px;
 	position: relative;
-	//background-color: $backgroundCol
+
 
 	.picnic{
 		width:140px;
@@ -521,22 +745,56 @@ body{
 		//background-color: rgba(255,187,115, 0.1);
 		//margin-left: 20px;
 		border-radius: 5px;
-
-
 	}
+	.changeAmountGuest{
+		margin-left: 20px;
+		&:first-child{
+
+		}
+	}
+
+	.changeAmountGuest,
+	.changeAmount button{
+			background-color: white;
+			width: 20px;
+			height: 20px;
+			border: 1px solid $backgroundColor;
+			border-radius: 5px;
+			box-shadow: 1px 1px 0 0 $textColor;
+			transition: all 0.3s ease 0s;
+    		cursor: pointer;
+
+			&:active{
+				transform: translateY(2px);
+				box-shadow: 0px 0px 0 0 $textColor;
+
+			}
+		}
+
+
 	button[type='submit']{
 		margin:0 20px 20px 20px;
 		color:white;
 		padding:10px;
-		font-size: 20px;
+		font-size: 18px;
 		background-color: $brightButtonColor;
 		border-radius: 5px;
+    	box-shadow: 2px 2px 3px $textColor;
+    	border:$brightButtonColor;
+    	transition: all 0.3s ease 0s;
+   		 cursor: pointer;
 
+		
+		&:active{
+			box-shadow: 0px 0px 0px $textColor;
+	  		transform: translateY(5px);
+		}
 	}
 
 	.changeAmount{
 		display: inline-block;
 		width:50%;
+
 	}
 
 	ol{
@@ -555,13 +813,166 @@ body{
 	}
 }
 
-@media screen and (max-width: 800px){
+
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+  overflow-y: scroll
+}
+
+
+#edit-item-overlay{
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  cursor: pointer;
+  overflow-y: scroll
+
+}
+  .edit-item{
+    font-size: 16px;
+    border:1px solid #5e3101;
+    border-radius: 5px;
+    color:$textColor;;
+    box-sizing:border-box;
+    z-index: 2;
+    margin:10px auto;
+    display: flex;
+    width: 400px;
+    max-width:100%;
+    flex-direction:column;
+    align-items:center;
+    padding:40px;
+    background-color: white;
+
+  
+      
+  h2{
+    margin-top: 0;
+      }
+
+  .select-section {
+    display: block;
+    font-size: 14px;
+    color: #5e3101;
+    padding: 5px 10px;
+    border: 1px solid $textColor;
+    border-radius: 5px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: rgba(255,187,115, 0.1);
+    background-image: url('img/arrow-down.svg');
+    background-repeat: no-repeat, repeat;
+    background-position: right 2% top 50%;
+    background-size: .65em auto, 100%;
+    width:220px;
+    margin-top: 20px;
+    margin-bottom: 10px
+
+	}
+
+	.select-section::-ms-expand {
+    	display: none;
+	}
+	.select-section:hover {
+ 	   border-color: $textColor;	
+	}
+	.select-section:focus {
+    	border-color: $textColor;
+    	color: $textColor; 
+    	outline: none;
+	}
+	.select-css option {
+    	font-weight:normal;
+    	padding-left: 10px;
+
+	}
+  	button{
+	    width:200px;
+	    display:block;
+	    margin: 20px auto 0px auto;
+	    height: 30px;
+	    font-size: 18px;
+	    border-radius:5px;
+	    background-color:  #FF5D40;
+	    border:1px solid  #FF5D40;;
+	    color:white;
+	    transition: all 0.3s ease 0s;
+	    cursor: pointer;
+	    box-shadow: 2px 2px 3px 0 $textColor;
+
+    
+    &:active{
+      box-shadow: 0px 0px 0px 0 $textColor;
+      transform:translateY(5px)
+    	}
+    }
+        
+    
+    input,textarea{
+      border:1px solid #5e3101;
+      border-radius: 5px;
+ 	  background-color: rgba(255,187,115, 0.1);
+       margin-bottom: 10px;
+      color:$textColor;
+      font-family:"Merriweather";
+      display: block;
+      width:200px;
+      font-size: 14px;
+      height: 20px;
+      padding: 10px;
+  }
+   
+    
+    label{
+    	width:200px;
+    	display: block;
+    }
+
+    textarea{
+      height: 60px;
+
+    }
+
+
+}
+
+
+
+
+@media screen and (max-width: 900px){
+	.container{
+		width:700px;
+	}
 	.menu{
 		width:100%;
+		justify-content:space-between;
+	}
+
+	.menu-item:nth-of-type(2n){
+		margin-right:0;
 	}
 
 	.menu-item_change{
-	    //box-sizing:border-box;
+	overflow: scroll;
 	    width:60%;
 
 	}
@@ -570,12 +981,16 @@ body{
 		align-self:flex-start;
 
 	}
+	.header-top{
+		width:700px;
+		justify-content:space-around;
+	}
 
 	.menu-item__description_change{
 		width:45%
 	}
 	.ordersHistory{
-		margin:0;
+		margin:0 0 100px 0;
 		padding:0;
 
 	table, th, td, tr{
@@ -630,9 +1045,23 @@ body{
 	}
 }
 
-@media screen and (max-width: 550px){
+@media screen and (max-width: 670px){
+	.container{
+		width:320px;
+	}
 	.menu-item_change{
-		width:80%
+		width:90%;
+		top:0;
+		left:5%;
+		max-height: 100%;
+		overflow: scroll;
+	}
+
+	.menu-item:nth-of-type(n){
+		margin: 20px auto;
+	}
+	.header-top{
+		width:320px;
 	}
 
 	.menu-item__img_change{
@@ -649,11 +1078,17 @@ body{
 	}
 	
 	.menu{
-		width:80%;
+		width:100%;
 	}
 	.menu-item{
-		width:100%;
+		width:280px;
 		margin:10px auto;
+		height: 540px;
+		
+
+		&:hover{
+			transform:none;
+		}
 	}
 	.menu-item__imgDesc_change{
 		margin: auto;
@@ -664,7 +1099,7 @@ body{
 	}
 
 	.ordersHistory table{
-		width:90%;
+		width:320px;
 		padding-left: 0;
 	}
 	.basket{
@@ -683,11 +1118,46 @@ body{
 			width:30%
 		}
 		.picnic{
-			width:100px;
+			width:80px;
+			top:60px;
 		}
 	}
 	.login-register{
-		width:90%;
+		width:300px;
+		left:35px;
+	}
+
+	.buttons{
+		width:100%
+	}
+
+	#sections{
+		width:100%
+	}
+	.personal{
+		border:none;
+		width:280px;
+		table{
+			margin-bottom: 200px;
+		}
+		
+	}
+
+}
+
+@media screen and (min-width: 1200px){
+	.menu-item{
+		margin-right: 20px;
+	}
+	.menu-item:last-child{
+		margin-right: 0
+	}
+
+	.menu{
+		justify-content:flex-start
+	}
+	.header-top{
+		justify-content:space-between
 	}
 }
 

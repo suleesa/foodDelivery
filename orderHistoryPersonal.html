@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<head>
+    <title>Delivery Food</title>
+    <link rel="stylesheet" href="style.css" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<header class='header container'>
+  <div class='up'>
+    <a href="#sections">
+      <img src="img/up-arrow.svg" class='arrow-up'>
+    </a>
+  </div>
+  <div class='header-top'>
+      <nav>
+      <ul id='sections'>
+        <li class='sections__item'><a href="./index.html#soups">Супы</a></li>
+        <li class='sections__item'><a href="./index.html#pizza">Пицца</a></li>
+        <li class='sections__item'><a href="./index.html#pasta">Паста</a></li>
+        <li class='sections__item'><a href="./index.html#main">Горячие блюда</a></li>
+        <li class='sections__item'><a href="./index.html#dessert">Десерты</a></li>
+      </ul>
+    </nav>
+    <div class='buttons log' id='logOut' style='display:flex'>
+      <a href="./orderHistoryPersonal.html"><button class='profile'>Личный кабинет</button></a>
+      <a href='./index.html'><button class='out'>Выйти</button></a>
+    </div>
+ 
+  </div>
+</header>
+<body>
+
+<div class='personal'>
+    <h2>Личные данные</h2>
+    <label for="name"> Ваше имя </label>
+    <input type="text" name="name" placeholder="Иван Иванов">
+    <label for="address"> Адрес </label>
+    <textarea name="address" placeholder="Санкт-Петербург, Дворцовая площадь д.1"></textarea>
+    <label for="telephone"> Телефон </label>
+    <input type="text" name="telephone" placeholder="+0 123 456 78 90 ">
+    <label for="email"> Email </label>
+    <input type="text" name="email" placeholder="admin@admin.ru">
+    <label for="password"> Пароль </label>
+    <input type="password" name="password" placeholder="*******">
+    <button class='save'>Сохранить</button>
+  </div>
+  <div class='ordersHistory'>
+    <table>
+      <caption>История заказов</caption>
+      <tr>
+        <th>Клиент </th>
+        <th>Дата заказа</th>
+        <th>Статус</th>
+        <th class='payment'>Оплата</th>
+        <th>Курьер</th>
+        <th>Сумма</th>
+        <th>Заказ</th>
+        <th></th>
+      </tr>
+      <tr>
+        <td data-th='Клиент' class='client'>0011</td>
+        <td data-th='Дата' class='date'>16.08.19</td>
+        <td data-th="Статус">
+          <select class="select-css">
+            <option>Доставлен</option>
+            <option>Передан на доставку</option>
+            <option>Отменен</option>
+          </select>
+        </td>
+        <td class='payment' data-th='Оплата'>
+          <select class="select-css">
+            <option>Оплачено банковской картой</option>
+            <option>Оплата наличными при доставке</option>
+            <option>Комплимент от ресторана</option>
+            </select>
+        </td>
+        <td class='deliveryGuy' data-th='Курьер'>
+          <select class="select-css">
+            <option>Иван Иванов</option>
+            <option>Семен Семенов</option>
+            <option>Павел Павлов</option>
+            </select>
+        </td>
+        
+        <td data-th='Сумма'>1980 руб.</td>
+        <td data-th='Заказ'>
+          <ol>
+            <li>Свиная корейка на кости</li>
+            <li>Крем-суп из тыквы</li>
+            <li>Барселона</li>
+          </ol>
+        </td>
+        <td data-th=''><button>Повторить</button></td>
+      </tr>
+
+     
+      <tr>
+        <td data-th='Клиент' class='client'>0011</td>
+        <td data-th='Дата' class='date'>19.08.19</td>
+         <td data-th="Статус">
+          <select class="select-css">
+            <option>Доставлен</option>
+            <option>Передан на доставку</option>
+            <option>Отменен</option>
+          </select>
+        </td>
+        <td class='payment' data-th='Оплата'>
+          <select class='select-css'>
+            <option>Оплачено банковской картой</option>
+            <option>Оплата наличными при доставке</option>
+            <option>Комплимент от ресторана</option>
+            </select>
+        </td>
+        <td class='deliveryGuy' data-th='Курьер'>
+          <select class="select-css">
+            <option>Иван Иванов</option>
+            <option>Семен Семенов</option>
+            <option>Павел Павлов</option>
+            </select>
+        </td>
+        
+        <td data-th='Сумма'>1980 руб.</td>
+        <td data-th='Заказ'>
+          <ol>
+            <li>Свиная корейка на кости</li>
+            <li>Лазанья мясная</li>
+            <li>Барселона</li>
+            <li>Паста с морепродуктами</li>
+          </ol>
+        </td>
+        <td data-th=''><button>Повторить</button></td>
+      </tr>
+  
+  
+      <tr>
+        <td data-th='Клиент' class='client'>0013</td>
+        <td data-th='Дата' class='date'>21.08.19</td>
+        <td data-th="Статус">
+          <select class="select-css status">
+            <option>Доставлен</option>
+            <option>Передан на доставку</option>
+            <option>Отменен</option>
+          </select>
+        </td>       
+
+        <td class='payment' data-th='Оплата'>
+          <select class='select-css'>
+            <option>Оплачено банковской картой</option>
+            <option>Оплата наличными при доставке</option>
+            <option>Комплимент от ресторана</option>
+            </select>
+        </td>
+        <td class='deliveryGuy' data-th='Курьер'>
+          <select class="select-css">
+            <option>Иван Иванов</option>
+            <option>Семен Семенов</option>
+            <option>Павел Павлов</option>
+            </select>
+        </td>
+        
+        <td data-th='Сумма'>2190 руб.</td>
+        <td data-th='Заказ'>
+          <ol>
+            <li>Финская уха с лососем</li>
+            <li>Вегетариано</li>
+            <li>Графские развалины</li>
+          </ol>
+        </td>
+        <td data-th=''><button>Повторить</button></td>
+
+      </tr>
+
+    </table>
+  </div>
+
+   <div class="basket">
+  <a href="./order.html">
+  <button>
+        <p href=#>Оформить заказ</p>
+        <p class='basket__price'> 650 руб. </p>
+  </button>
+  </a>
+</div>
+
+</body>

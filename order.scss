@@ -1,0 +1,79 @@
+.order{
+	color:$textColor;
+	margin: 100px auto;
+	width:50%;
+	border:2px solid $textColor;
+	font-size: 16px;
+	border-radius: 5px;
+	position: relative;
+
+
+	.picnic{
+		width:140px;
+		position: absolute;		
+		top:40px;
+		right: 40px;
+	}
+	h3{
+		margin:20px
+	}
+	h1{
+		text-align: left;
+		margin-left: 20px;
+	}
+	label,p, input[type='text'],textarea {
+		display: block;
+		margin:0 20px;
+	}
+
+	input[type='text']{
+		//background-color: rgba(255,187,115, 0.1);
+		margin:5px 0;
+		height: 30px;
+		border-radius: 5px;
+
+	}
+	label{
+		padding:0;
+	}
+
+	textarea{
+		height: 60px;
+		width:200px;
+		margin:5px 0;
+		//background-color: rgba(255,187,115, 0.1);
+		//margin-left: 20px;
+		border-radius: 5px;
+
+
+	}
+	button[type='submit']{
+		margin:0 20px 20px 20px;
+		color:white;
+		padding:10px;
+		font-size: 20px;
+		background-color: $brightButtonColor;
+		border-radius: 5px;
+
+	}
+
+	.changeAmount{
+		display: inline-block;
+		width:50%;
+	}
+
+	ol{
+		margin:20px;
+		list-style: none;
+		padding: 0;
+		border-top: 1px solid $textColor;
+		border-bottom: 1px solid $textColor;
+		//border-radius: 5px;
+
+		li{
+			display: inline-block;
+			width:35%;
+			margin:5px 0;
+		}
+	}
+}

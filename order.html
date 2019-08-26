@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<head>
+    <title>Delivery Food</title>
+    <link rel="stylesheet" href="style.css" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header class='header container'>
+  <div class='up'>
+    <a href="#sections">
+      <img src="img/up-arrow.svg" class='arrow-up'>
+    </a>
+  </div>
+  <div class='header-top'>
+      <nav>
+      <ul id='sections'>
+        <li class='sections__item'><a href="./index.html#soups">Супы</a></li>
+        <li class='sections__item'><a href="./index.html#pizza">Пицца</a></li>
+        <li class='sections__item'><a href="./index.html#pasta">Паста</a></li>
+        <li class='sections__item'><a href="./index.html#main">Горячие блюда</a></li>
+        <li class='sections__item'><a href="./index.html#dessert">Десерты</a></li>
+      </ul>
+    </nav>
+    <div class='buttons log' id='logOut' style='display:flex'>
+      <a href="./orderHistoryPersonal.html"><button class='profile'>Личный кабинет</button></a>
+      <a href='./index.html'><button class='out'>Выйти</button></a>
+    </div>
+ 
+  </div>
+</header>
+<div class='order'>
+  <h1>Оформление заказа </h1>
+  <img src="img/picnic-basket.svg" class='picnic'>
+  <form>
+    <label>Имя
+     <input type="text" name="name" placeholder="Иван Иванов">
+    </label>
+    <label>Телефон
+     <input type="text" name="telephone" placeholder="+7 912 3456789">
+    </label>
+    <label>Адрес
+     <textarea name="address"></textarea>
+    </label>
+    <p>Количество персон</p>
+      <button class='changeAmountGuest'> - </button> 1шт <button class='changeAmountGuest'> + </button>
+  </form>
+    <h3>Ваш заказ</h3>
+    <ol>
+        <li>Финская уха с лососем</li><div class='changeAmount'><button> - </button> 1 шт. <button> + </button></div>
+        <li>Вегетариано</li><div class='changeAmount'><button> - </button> 1 шт. <button> + </button></div>
+        <li>Графские развалины</li><div class='changeAmount'><button> - </button> 1 шт. <button> + </button>
+        </div>
+        <li>Равиоли со шпинатом и сливочным сыром</li><div class='changeAmount'><button> - </button> 1 шт. <button> + </button>
+        </div>
+
+    </ol>
+  <p>Доставка <span>0 руб.</span></p>
+  <h3>Итого<span> 984 руб.</span></h3>
+  <button type="submit">Заказать</button>
+</div>
+</div>
+
+</body>
